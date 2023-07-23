@@ -14,11 +14,11 @@ export default function Lista(props: ListaProps) {
             <span className={`
                 flex justify-center items-center 
                 h-8 w-8 sm:w-10 sm:h-10 p-1.5 rounded-full
-                ${transacao.tipo === 'receita' ? 'bg-green-500' : 'bg-red-500'}
+               
             `}>
                 {transacao.tipo === 'receita'
-                    ? <IconTrendingUp />
-                    : <IconTrendingDown />}
+                    ? <IconTrendingUp color="green"  />
+                    : <IconTrendingDown color="red" />}
             </span>
         )
     }

@@ -50,7 +50,7 @@ export default function CampoMesAno(props: CampoMesAnoProps) {
     return (
         <div className="flex items-center gap-2">
             <Button className={`
-                flex justify-center items-center bg-red-500
+                flex justify-center items-center border border-gray-500
                 text-white cursor-pointer p-1
             `} color="red" onClick={decrementar}>
                 <IconChevronLeft size={14} />
@@ -58,7 +58,7 @@ export default function CampoMesAno(props: CampoMesAnoProps) {
             <Popover withArrow>
                 <Popover.Target>
                     <Button className={`
-                        bg-gradient-to-r from-indigo-600 to-cyan-600
+                        border border-gray-500
                         text-white cursor-pointer select-none 
                         w-full sm:w-44 px-3
                     `}>{Data.mmyy.formatar(data)}</Button>
@@ -86,7 +86,7 @@ export default function CampoMesAno(props: CampoMesAnoProps) {
                 </Popover.Dropdown>
             </Popover>
             <Button className={`
-                flex justify-center items-center bg-red-500
+                flex justify-center items-center border border-gray-500
                 text-white cursor-pointer p-1
             `} color="red" onClick={incrementar}>
                 <IconChevronRight size={14} />
