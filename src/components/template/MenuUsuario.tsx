@@ -30,11 +30,6 @@ export default function MenuUsuario() {
                         icon={<IconArrowsRightLeft size={14} />}
                     >Finanças</Menu.Item>
                 </Link>
-                <Link href="/usuario">
-                    <Menu.Item
-                        icon={<IconUser size={14} />}
-                    >Meus Dados</Menu.Item>
-                </Link>
                 <Menu.Divider />
                 <Menu.Item
                     color="red"

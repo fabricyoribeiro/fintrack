@@ -1,4 +1,4 @@
-import useTransacao, { TipoExibicao } from '@/data/hooks/useTransacao'
+import useTransacao from '@/data/hooks/useTransacao'
 import { transacaoVazia } from '@/logic/core/financas/Transacao'
 import { Button, SegmentedControl } from '@mantine/core'
 import { IconLayoutGrid, IconList, IconPlus } from '@tabler/icons-react'
@@ -8,7 +8,6 @@ import Conteudo from '../template/Conteudo'
 import NaoEncontrado from '../template/NaoEncontrado'
 import Pagina from '../template/Pagina'
 import Formulario from './Formulario'
-import Grade from './Grade'
 import Lista from './Lista'
 import Saldo from './Saldo'
 
@@ -16,8 +15,8 @@ export default function Financas() {
   const {
     data,
     alterarData,
-    alterarExibicao,
-    tipoExibicao,
+    // alterarExibicao,
+    // tipoExibicao,
     transacoes,
     transacao,
     selecionar,
@@ -32,13 +31,6 @@ export default function Financas() {
           <Saldo />
           <CampoMesAno data={data} dataMudou={alterarData} />
 
-          {/* <SegmentedControl
-                        data={[
-                            { label: <IconList />, value: 'lista' },
-                            { label: <IconLayoutGrid />, value: 'grade' }
-                        ]}
-                        onChange={tipo => alterarExibicao(tipo as TipoExibicao)}
-                    /> */}
         </div>
         <div className='flex justify-center my-4'>
           <Button
@@ -55,11 +47,7 @@ export default function Financas() {
 
   function renderizarTransacoes() {
     const props = { transacoes, selecionarTransacao: selecionar }
-    return tipoExibicao === 'lista' ? (
-      <Lista {...props} />
-    ) : (
-      <Grade {...props} />
-    )
+    return <Lista {...props} />
   }
 
   return (
