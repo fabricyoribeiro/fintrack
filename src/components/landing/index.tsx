@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Nunito } from "next/font/google";
 import Header from "@/components/Header";
 import Link from "next/link";
-import HomeImage from "./../../public/home-image.png";
+import HomeImage from "./../../../public/home-image.png";
 import Rectangle from "./../../public/rectangle.png";
 import { useContext } from "react";
 import AutenticacaoContext from "@/data/contexts/AutenticacaoContext";
