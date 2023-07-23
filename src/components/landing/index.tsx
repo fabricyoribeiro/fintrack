@@ -3,12 +3,10 @@ import { Nunito } from "next/font/google";
 import Header from "@/components/Header";
 import Link from "next/link";
 import HomeImage from "./../../../public/home-image.png";
-import Rectangle from "./../../public/rectangle.png";
 import { useContext } from "react";
 import AutenticacaoContext from "@/data/contexts/AutenticacaoContext";
 
-// const inter = Inter({ subsets: ['latin'] })
-// const nunito = Nunito({ subsets: ['latin'], weight: ['300', '200', '400', '500','600', '800', '900'] })
+
 
 export default function Home() {
   const { loginGoogle } = useContext(AutenticacaoContext);
@@ -30,15 +28,9 @@ export default function Home() {
               <span>controle sobre</span> <br />
               <div className="relative ">
                 <span className="z-10">seu dinheiro</span>
-                {/* <Image
-                src={Rectangle}
-                alt=""
-                className="absolute right-0 bottom-2 z-0"
-                width={220}
-              /> */}
+
               </div>
             </div>
-            {/* Adicionando o título */}
             <p className="font-extralight text-lg text-gray-400">
               Organize seu dinheiro de forma inteligente{" "}
             </p>

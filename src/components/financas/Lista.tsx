@@ -38,11 +38,18 @@ export default function Lista(props: ListaProps) {
     }
 
     return (
-        <div className={`
-            flex flex-col border border-zinc-700
-            rounded-xl overflow-hidden
-        `}>
-            {props.transacoes.map(renderizarLinha)}
+        <div>
+            <div className="flex justify-between px-5 pb-2">
+                <span className="w-full md:w-[57%]">Descrição</span>
+                <span className="hidden md:inline flex-1 ">Data</span>
+                <span>Valor</span>
+            </div>
+            <div className={`
+                flex flex-col border border-zinc-700
+                rounded-xl overflow-hidden
+            `}>
+                {props.transacoes.map(renderizarLinha)}
+            </div>
         </div>
     )
 }

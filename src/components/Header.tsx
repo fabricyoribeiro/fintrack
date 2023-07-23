@@ -1,8 +1,13 @@
 import Link from "next/link";
 import Logo from "./Logo";
 import { GoogleLogo } from "phosphor-react";
+import AutenticacaoContext from "@/data/contexts/AutenticacaoContext";
+import { useContext } from "react";
 
 export default function Header() {
+
+  const { loginGoogle } = useContext(AutenticacaoContext);
+
   return (
     <header className=" bg-black">
       <div
@@ -23,7 +28,7 @@ export default function Header() {
           `}
           >
             <GoogleLogo />
-            <Link href="/finance">Login</Link>
+            <button onClick={loginGoogle} >Login</button>
           </button>
         </div>
       </div>
