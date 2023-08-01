@@ -3,12 +3,10 @@ import Transacao from "@/logic/core/financas/Transacao"
 import { useCallback, useContext, useEffect, useState } from "react"
 import AutenticacaoContext from "../contexts/AutenticacaoContext"
 
-// export type TipoExibicao = "lista" | "grade"
 
 export default function useTransacao() {
     const { usuario } = useContext(AutenticacaoContext)
     const [data, setData] = useState<Date>(new Date())
-    // const [tipoExibicao, setTipoExibicao] = useState<TipoExibicao>("lista")
     const [transacoes, setTransacoes] = useState<Transacao[]>([])
     const [transacao, setTransacao] = useState<Transacao | null>(null)
 
@@ -40,11 +38,9 @@ export default function useTransacao() {
         data,
         transacoes,
         transacao,
-        // tipoExibicao,
         salvar,
         excluir,
         selecionar: setTransacao,
         alterarData: setData,
-        // alterarExibicao: setTipoExibicao
     }
 }

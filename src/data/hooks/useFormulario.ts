@@ -19,4 +19,5 @@ export default function useFormulario<T = any>(dadosIniciais?: T) {
         alterarDados,
         alterarAtributo
     }
+    
 }

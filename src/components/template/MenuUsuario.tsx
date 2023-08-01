@@ -24,13 +24,7 @@ export default function MenuUsuario() {
                 </div>
             </Menu.Target>
             <Menu.Dropdown>
-                <Menu.Label>Usuário</Menu.Label>
-                <Link href="/">
-                    <Menu.Item
-                        icon={<IconArrowsRightLeft size={14} />}
-                    >Finanças</Menu.Item>
-                </Link>
-                <Menu.Divider />
+
                 <Menu.Item
                     color="red"
                     icon={<IconLogout size={14} />}
