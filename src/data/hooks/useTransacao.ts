@@ -9,6 +9,9 @@ export default function useTransacao() {
     const [data, setData] = useState<Date>(new Date())
     const [transacoes, setTransacoes] = useState<Transacao[]>([])
     const [transacao, setTransacao] = useState<Transacao | null>(null)
+    
+    const [todasTransacoes, setTodasTransacoes] = useState<Transacao[]>([])
+
 
     const buscarTransacoes = useCallback(async function () {
         if(!usuario) return
@@ -16,8 +19,15 @@ export default function useTransacao() {
         setTransacoes(transacoes)
     }, [usuario, data])
 
+    const buscarTodasTransacoes = useCallback(async function () {
+        if(!usuario) return
+        const transacoes = await servicos.transacao.consultar(usuario)
+        setTodasTransacoes(transacoes)
+    }, [usuario, data])
+
     useEffect(() => {
         buscarTransacoes()
+        buscarTodasTransacoes()
     }, [buscarTransacoes, data])
 
     async function salvar(transacao: Transacao) {
@@ -37,6 +47,7 @@ export default function useTransacao() {
     return {
         data,
         transacoes,
+        todasTransacoes,
         transacao,
         salvar,
         excluir,
