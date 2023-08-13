@@ -39,10 +39,12 @@ export default function Graphic() {
     curveType: 'function',
     legend: { position: 'bottom' },
     hAxis: { format: 'currency' },
-    animation: { duration: 500, easing: 'linear', startup: true }
+    animation: { duration: 500, easing: 'linear', startup: true },
+    colors: ['#ff4155', '#ab4422'],
+    backgroundColor: '#181815'
   }
   return (
-    <div>
+    <div className=''>
       <Chart
         chartType="ColumnChart"
         width="100%"
