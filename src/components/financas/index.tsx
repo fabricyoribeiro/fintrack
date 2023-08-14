@@ -58,17 +58,6 @@ export default function Financas() {
       <div>
         <div className="flex justify-between items-center mt-5">
           <Fluxo receita={receita()} despesa={despesas()} />
-          {/* <Link href='/graphic' className='flex gap-4 '>
-            Ver resumo anual
-            <IconChartBar  />
-          </Link> */}
-          {/* <Dialog.Trigger>
-            Ver resumo anual
-          </Dialog.Trigger> */}
-          {/* <button onClick={handleOpen}>Clique para abrir o diálogo</button>
-          <Dialog open={open} onOpenChange={handleClose}>
-            <div style={{ padding: '20px' }}>teste</div>
-          </Dialog> */}
           <Graphic />
         </div>
         <div className="flex justify-between mt-10 mb-6">
